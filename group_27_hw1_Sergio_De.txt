@@ -1,0 +1,74 @@
+Первое ДЗ 
+Linux terminal (GitBash) commands
+
+1) Посмотреть,где я
+pwd 
+2) Создать папку
+mkdir folder
+3) Зайти в папку
+cd folder
+4) Создать 3 папки
+mkdir honda1 hona2 honda3
+5) Зайти в любоую папку
+cd honda
+6) Создать 5 файлов (3 txt, 2 json)
+touch file1.txt file2.txt file3.txt jj.json jjj.json
+7) Создать 3 папки
+mkdir p1 p2 p3
+8. Вывести список содержимого папки
+ls
+9) + Открыть любой txt файл
+vim file1.txt
+10) + написать туда что-нибудь, любой текст.
+i
+{hello,my name is Sergio}
+{i was born in Russia}
+11) + сохранить и выйти.
+esc-выйти из редактирования
+:wq -сохранить и выйти
+12) Выйти из папки на уровень выше
+cd ..
+cd ../.. -выйти на два уровня выше
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv honda1/file1.txt jj.json p1
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp file2.txt jjj.json p1
+15) Найти файл по имени
+find -name file1.txt
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+grep -r file1.txt
+17) вывести несколько первых строк из текстового файла
+head -2 file1.txt
+18) вывести несколько последних строк из текстового файла
+tail -2 file1.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less file1.txt
+q -выйти из режима просмотра
+20) вывести дату и время
+date
+=========
+
+Задание *
+1) Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request
+
+curl "http://162.55.220.72:5005/terminal-hw-request"
+ответ сервера  
+    {"Intro":"Hello!! This is your the first response from server","Tasks":{"Task_1":"Send the next URL in terminall: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)"
+task1
+curl "http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)"
+ в ответет сервера изменяем :(set_your_String) -имя age=(set_your_number) -возраст
+ответ сервера -name=(Sergio)&age=(34)
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+nano myscript.sh
+#!/bin/bash
+        mkdir new_folder
+        cd new_folder
+        mkdir p1 p2 p3
+        cd p1
+        touch file11.txt file22.txt file33.txt jj2.json jjj3.json
+        mkdir h1 h2 h3
+        ls -la
+        mv file11.txt jj2.json h1
+    ctrl+o ctrl+x
+
