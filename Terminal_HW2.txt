@@ -199,7 +199,6 @@ mkdir inner_dir_3 && touch inner_dir_3/myfile.txt | git log >inner_dir_3/myfile.
 
 grep -l -r sec| xargs -I {} mv {} inner_dir_2/
 
-Quardo Rossi, [25.12.2023 21:44]
  37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
 
 grep -l -r sec| xargs -I {} cp {} inner_dir_2/
